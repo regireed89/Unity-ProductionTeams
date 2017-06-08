@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
+[RequireComponent(typeof(Animator))]
 public class PlayerBehavior : MonoBehaviour, IDamageable
 {
 
@@ -8,7 +9,13 @@ public class PlayerBehavior : MonoBehaviour, IDamageable
     public GameObject bottlePrefab;
     private int _playerHealth = 100;
     public Text playerHp;
-    
+    private Animator animator;
+
+    public void Start()
+    {
+        animator = GetComponent<Animator>();
+    }
+
     public int PlayerHealth
     {
         get { return _playerHealth; }
@@ -38,7 +45,6 @@ public class PlayerBehavior : MonoBehaviour, IDamageable
             ThrowBottle();
 
         playerHp.text = PlayerHealth.ToString();
+        animator.SetInteger("playerHealth", PlayerHealth);
     }
-
-  
 }

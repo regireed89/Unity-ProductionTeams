@@ -2,8 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PickUpSpawner : MonoBehaviour {
+public class PickUpSpawner : MonoBehaviour
+{
 
+    public float timer;
+
+    public GameObject pickup;
 	// Use this for initialization
 	void Start ()
 	{
@@ -11,7 +15,12 @@ public class PickUpSpawner : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
-		
+	void Update ()
+	{
+	    timer -= 1;
+	    if (timer <= 0)
+	    {
+	        Instantiate(pickup);
+	    }
 	}
 }
