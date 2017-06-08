@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 1112b9188c3a3b943b1abe4fedceeda4
-timeCreated: 1496942935
+guid: bc75c7a517d9c9e4491aa8a58a12e991
+timeCreated: 1496950644
 licenseType: Pro
 ModelImporter:
   serializedVersion: 19
@@ -152,7 +152,7 @@ ModelImporter:
     400142: HughRig_Spine_TopSHJnt
     400144: polySurface1
     4300000: polySurface1
-    7400000: EnemyAttack
+    7400000: EnemyDeath
     9500000: //RootNode
     13700000: polySurface1
   materials:
@@ -179,7 +179,7 @@ ModelImporter:
     extraExposedTransformPaths: []
     clipAnimations:
     - serializedVersion: 16
-      name: EnemyAttack
+      name: EnemyDeath
       takeName: Take 001
       firstFrame: 1
       lastFrame: 24
